@@ -1,2 +1,16 @@
-eval(function(d,g,a,c,b,f){b=function(e){return e.toString(g)};if(!"".replace(/^/,String)){for(;a--;)f[b(a)]=c[a]||b(a);c=[function(e){return f[e]}];b=function(){return"\\w+"};a=1}for(;a--;)c[a]&&(d=d.replace(new RegExp("\\b"+b(a)+"\\b","g"),c[a]));return d}('b("h://c.i.j/c/k").5((6)=>6.d()).5((0)=>{1.2("7").3=0.7;1.2("9").3=0.a.e+0.a.9;1.2("8").3=0.a.8}).f((4)=>g.4(4));b("l://m.n").5((6)=>6.d()).5((0)=>{1.2("7").3=0.7;1.2("9").3=0.e;1.2("8").3=0.8}).f((4)=>g.4(4));',24,24,"data document getElementById textContent error then response ip city prov info fetch api json country catch console https vvhan com getIpInfo http ipwho is".split(" "),
-0,{}));
+fetch("https://api.vvhan.com/api/getIpInfo")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("ip").textContent = data.ip;
+    document.getElementById("prov").textContent = data.info.country+data.info.prov;
+    document.getElementById("city").textContent = data.info.city;
+  })
+  .catch((error) => console.error(error));
+fetch("http://ipwho.is")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("ip").textContent = data.ip;
+    document.getElementById("prov").textContent = data.country;
+    document.getElementById("city").textContent = data.city;
+  })
+  .catch((error) => console.error(error));
