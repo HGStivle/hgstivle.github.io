@@ -1,11 +1,4 @@
-fetch("http://ipwho.is")
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById("ip").textContent = data.ip;
-    document.getElementById("prov").textContent = data.country;
-    document.getElementById("city").textContent = data.city;
-  })
-  .catch((error) => console.error(error));
+document.getElementById('UserAgent').textContent = navigator.userAgent;
 fetch("https://api.vvhan.com/api/getIpInfo")
   .then((response) => response.json())
   .then((data) => {
