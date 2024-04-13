@@ -1,41 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Stivleの小屋</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-	<!-- require MetingJS -->
-	<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+      <meta charset="utf-8">
+     <title>Stivleの小屋</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
   </head>
-  <body>
-你好陌生人                     
-<p>您的IP：<span id="ip"></span></p>
-<p>IP属地：<span id="prov"></span></p>
-<p>城市：<span id="city"></span></p>
-<span type="text" id="UserAgent"></span>
-    <p>QQ：</p>
-    <a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=2360532630">
-    <img src="http://q2.qlogo.cn/headimg_dl?dst_uin=2360532630&spec=640"/>
-QQ
-    </a>
-    <a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=833253461&card_type=group&source=qrcode">
-    <img src="http://p.qlogo.cn/gh/833253461/833253461/640"/>
-QQ群
-    </a>
-   <p>点击图片跳转</p>
-    </body>
-     <style>
-  img {
-   width: 10%;
-   height: 10%;
-   border-radius: 50%;
-   align-self: center;
-}
-     a {
-    text-decoration: none
-}
-     </style>
-      <meting-js server="netease" type="playlist" id="60198"></meting-js>
-     <script src="ip.js"></script>
+<body>
+Hello World!
+<div class="Dframe">
+     <p class="Pip">您的IP</p>
+     <p><span id="ip"></span></p>
+     <hr class="style-one" />
+     <p class="Pip">IP属地</p>
+     <p><span id="prov"></span></p>
+     <hr class="style-one" />
+     <p class="Pip">UserAgent</p>
+     <span type="text" id="UserAgent"></span>
+</div>
+   <a href="https://qm.qq.com/q/ZpDtvrX4Qw">
+   <img src="img/qq-circle.svg"/>
+   </a>
+</body>
+  <meting-js server="netease" type="playlist" id="60198"></meting-js>
+  <script src="ip.js"></script>
 </html>
